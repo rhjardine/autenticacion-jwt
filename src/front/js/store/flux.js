@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           method: "POST",
           body: JSON.stringify(requestBody),
           headers: {
-            "Content-type": "application/json",
+            "Content-Type": "application/json",
           },
         });
         if (!response.ok)
@@ -61,7 +61,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             Authorization: `Bearer ${token}`,
           },
         });
-        if (!resp.ok) throw Error("There was a problem in the login request");
+        if (!response.ok)
+          throw Error("There was a problem in the login request");
         else if (response.status === 403) {
           throw Error("Missing or invalid token");
         }

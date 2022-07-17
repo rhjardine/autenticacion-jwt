@@ -48,7 +48,7 @@ export const SignUp = (props) => {
             alert("something happened while creating the user.");
           }}
         >
-          {"sign up"}
+          {"Sign up"}
         </button>
       </div>
     </div>
